@@ -4,17 +4,23 @@ import { colors } from '../Colors';
 import { Feather, AntDesign, FontAwesome5 } from '@expo/vector-icons';
 
 export default class PostCard extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            like: false,
+        }
+    }
     render() {
         return (
             <View style={styles.container}>
                 {
                     this.props.post.map((item, index) => (
-                        <>
+                        <View key={index}>
                             <View style={{ flexDirection: 'row', justifyContent: "space-between" }}>
                                 <View style={{ flexDirection: 'row', justifyContent: "space-between" }}>
                                     <View style={styles.avata}>
                                         <Image
-                                            source={{ uri: item.image }}
+                                            source={{ uri: item.imageUrl }}
                                             style={{
                                                 width: 60,
                                                 height: 60,
@@ -23,19 +29,19 @@ export default class PostCard extends Component {
                                     </View>
                                     <View>
                                         <Text style={{ paddingHorizontal: 15, marginTop: 15, fontSize: 18, }}>{item.name}</Text>
-                                        <Text style={{ paddingHorizontal: 15, fontSize: 12, color: colors.black, }}>{item.time} • Public</Text>
+                                        <Text style={{ paddingHorizontal: 15, fontSize: 12, color: colors.black, }}>{item.createAt} • Public</Text>
                                     </View>
                                 </View>
                                 <TouchableOpacity style={{ alignItems: 'center', padding: 10, }}>
                                     <Feather name="chevron-down" size={30} color="black" />
                                 </TouchableOpacity>
                             </View>
-                            <Text style={{ marginVertical: 10, }}>{item.caption}</Text>
+                            <Text style={{ marginVertical: 10, }}>{item.name}</Text>
                             <View style={styles.card}>
                                 <View>
 
                                     <Image
-                                        source={{ uri: item.image }}
+                                        source={{ uri: item.imageUrl }}
                                         style={styles.image}
                                     />
 
@@ -45,11 +51,11 @@ export default class PostCard extends Component {
                                 <View style={styles.left}>
                                     <TouchableOpacity style={{ padding: 5, flexDirection: "row" }}>
                                         <AntDesign name="like2" size={28} color={colors.primariy} />
-                                        <Text style={{ padding: 6, }}>{item.love}</Text>
+                                        <Text style={{ padding: 6, }}>{item.price}</Text>
                                     </TouchableOpacity>
                                     <TouchableOpacity style={{ padding: 8, flexDirection: "row" }}>
                                         <FontAwesome5 name="comment-alt" size={24} color={colors.primariy} />
-                                        <Text style={{ padding: 6, }}>{item.coment}</Text>
+                                        <Text style={{ padding: 6, }}>{item.price}</Text>
                                     </TouchableOpacity>
                                 </View>
                                 <TouchableOpacity>
@@ -65,7 +71,7 @@ export default class PostCard extends Component {
                                     <Feather name="send" size={24} color={colors.black} />
                                 </TouchableOpacity>
                             </View>
-                        </>
+                        </View>
                     ))
                 }
             </View>

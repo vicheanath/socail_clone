@@ -32,10 +32,10 @@ export default class Story extends Component {
                     </TouchableOpacity>
                     {
                         this.props.user.map((item, index) => (
-                            <View style={{ flexDirection: "column" }}>
+                            <View key={index} style={{ flexDirection: "column" }}>
                                 <TouchableOpacity style={styles.story}>
                                     <Image
-                                        source={{ uri: item.image }}
+                                        source={{ uri: item.imageUrl }}
                                         style={styles.img}
                                     />
                                 </TouchableOpacity>

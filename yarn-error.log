@@ -1,20 +1,21 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Users\VICHEA\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add expo-image-picker@~8.1.0
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js
 
 PATH: 
-  C:\Program Files\Java\jdk1.8.0_211\bin;C:\Python38\Scripts\;C:\Python38\;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64_win\compiler;C:\Python27\;C:\Python27\Scripts;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\OpenSSL-Win64\bin;C:\Program Files\PuTTY\;C:\wamp64\bin\php\php5.6.40;C:\ProgramData\ComposerSetup\bin;C:\Program Files\nodejs\;C:\Program Files\Java\jdk1.8.0_211\bin;C:\Users\VICHEA\AppData\Local\Android\Sdk\platform-tools;C:\Users\VICHEA\AppData\Local\Android\Sdk\emulator;C:\Program Files\cmder_mini\bin;C:\Users\VICHEA\AppData\Local\Microsoft\WindowsApps;C:\Users\VICHEA\AppData\Local\Programs\Microsoft VS Code\bin;D:\Study\Flutter\flutter\bin;C:\Users\VICHEA\AppData\Roaming\Composer\vendor\bin;C:\Users\VICHEA\AppData\Local\GitHubDesktop\bin;C:\Users\VICHEA\AppData\Roaming\npm
+  C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\Admin\bin;C:\Program Files (x86)\Python38-32\Scripts;C:\Program Files (x86)\Python38-32;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64_win\compiler;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\Program Files\nodejs;D:\App Developent\Flutter\Driver And SDK\flutter\bin;C:\Program Files\Git\cmd;C:\Program Files\dotnet;C:\Program Files\Microsoft SQL Server\130\Tools\Binn;C:\Users\Admin\AppData\Local\Android\Sdk\emulator;C:\Program Files\OpenSSL-Win64\bin;C:\Program Files (x86)\Yarn\bin;C:\Program Files (x86)\GTK2-Runtime\bin;C:\Program Files\Cmder\vendor\bin;C:\Users\Admin\AppData\Local\Microsoft\WindowsApps;C:\Users\Admin\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Admin\AppData\Roaming\npm;D:\Web Development\php;C:\Users\Admin\AppData\Local\ComposerSetup\bin;C:\Users\Admin\AppData\Roaming\Composer\vendor\bin;C:\Users\Admin\AppData\Local\GitHubDesktop\bin;C:\Users\Admin\AppData\Local\Yarn\bin;C:\Users\Admin\AppData\Local\atom\bin
 
 Yarn version: 
-  1.21.1
+  1.22.4
 
 Node version: 
-  14.2.0
+  12.18.0
 
 Platform: 
   win32 x64
 
 Trace: 
-  Error: EPERM: operation not permitted, unlink 'D:\App\socail_clone\node_modules\file-uri-to-path\test'
+  Error: https://registry.yarnpkg.com/hermes-engine/-/hermes-engine-0.2.1.tgz: unexpected end of file
+      at Zlib.zlibOnError [as onerror] (zlib.js:180:17)
 
 npm manifest: 
   {

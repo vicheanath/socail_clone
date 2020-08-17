@@ -8,7 +8,7 @@ export default class Header extends Component {
         return (
             <View style={styles.container}>
                 <View style={styles.header}>
-                    <Image source={{ uri: 'https://logos-world.net/wp-content/uploads/2020/04/Facebook-Logo.png' }} style={styles.logo} />
+                    <Image source={require('./../assets/anonlogo.png')} style={styles.logo} />
                     <View flexDirection="row">
                         <TouchableOpacity style={styles.btn, styles.left}>
                             <Feather name="search" size={24} color={colors.black} />
@@ -53,10 +53,10 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         //paddingHorizontal: 15,
         marginTop: 25,
-        height: 50,
+        height: 70,
     },
     container: {
-        height: 72,
+        height: 80,
         borderBottomWidth: 1,
         borderBottomColor: colors.gray2,
     },

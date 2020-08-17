@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "socail_clone",
+    "name": "Anon Tech",
     "slug": "socail_clone",
     "platforms": [
       "ios",
@@ -23,6 +23,9 @@
     ],
     "ios": {
       "supportsTablet": true
+    },
+    "android": {
+      "package": "vichea.company.kh"
     }
   }
 }

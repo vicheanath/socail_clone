@@ -2,47 +2,10 @@ import React, { Component } from 'react';
 import { StyleSheet, Text, View, TouchableOpacity, Dimensions, TextInput, ScrollView } from 'react-native';
 import { colors } from '../Colors';
 import { MaterialIcons, Ionicons, Entypo } from '@expo/vector-icons';
-import * as ImagePicker from 'expo-image-picker';
-import Constants from 'expo-constants';
-import * as Permissions from 'expo-permissions';
 
 const { W, H } = Dimensions.get('window');
 export default class Notification extends Component {
-    state = {
-        image: null,
-    };
-    componentDidMount() {
-        this.getPermissionAsync();
-    }
-
-    getPermissionAsync = async () => {
-        if (Constants.platform.ios) {
-            const { status } = await Permissions.askAsync(Permissions.CAMERA_ROLL);
-            if (status !== 'granted') {
-                alert('Sorry, we need camera roll permissions to make this work!');
-            }
-        }
-    };
-
-    _pickImage = async () => {
-        try {
-            let result = await ImagePicker.launchImageLibraryAsync({
-                mediaTypes: ImagePicker.MediaTypeOptions.All,
-                allowsEditing: true,
-                aspect: [4, 3],
-                quality: 1,
-            });
-            if (!result.cancelled) {
-                this.setState({ image: result.uri });
-            }
-
-            console.log(result);
-        } catch (E) {
-            console.log(E);
-        }
-    };
     render() {
-        let { image } = this.state;
         return (
             <>
                 <View style={styles.container}>
@@ -75,7 +38,7 @@ export default class Notification extends Component {
 const styles = StyleSheet.create({
     post: {
         backgroundColor: colors.gray2,
-        margin:15,
+        margin: 15,
         borderRadius: 25,
         paddingHorizontal: 15,
         paddingVertical: 10,
@@ -89,7 +52,7 @@ const styles = StyleSheet.create({
         paddingVertical: 10,
     },
     container: {
-       width:W,
+        width: W,
     },
     input: {
         width: W,
